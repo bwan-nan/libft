@@ -6,7 +6,7 @@
 /*   By: bwan-nan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:48:56 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/07 12:52:59 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/07 13:25:34 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,5 @@ int		ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);
-	return (0);
-}
-
-int		main()
-{
-	ft_putnbr(ft_isdigit('a'));
 	return (0);
 }
