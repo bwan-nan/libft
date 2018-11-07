@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwan-nan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 14:46:25 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/06 14:50:04 by bwan-nan         ###   ########.fr       */
+/*   Created: 2018/11/07 12:48:56 by bwan-nan          #+#    #+#             */
+/*   Updated: 2018/11/07 12:52:59 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_islpha(int c)
+int		ft_isdigit(int c)
 {
-    if (ft_islower(c) || ft_isupper(c) || ft_isalpha(c))
-        return (1);
-    else
-        return (0);
+	if (c >= 48 && c <= 57)
+		return (1);
+	return (0);
+}
+
+int		main()
+{
+	ft_putnbr(ft_isdigit('a'));
+	return (0);
 }

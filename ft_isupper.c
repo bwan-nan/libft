@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwan-nan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 14:46:25 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/06 14:50:04 by bwan-nan         ###   ########.fr       */
+/*   Created: 2018/11/06 14:51:39 by bwan-nan          #+#    #+#             */
+/*   Updated: 2018/11/06 14:52:11 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_islpha(int c)
+int     ft_islower(int c)
 {
-    if (ft_islower(c) || ft_isupper(c) || ft_isalpha(c))
-        return (1);
-    else
-        return (0);
+	if (c >= 65 && c <= 90)
+		return (512);
+	return (0);
 }

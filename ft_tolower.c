@@ -6,13 +6,15 @@
 /*   By: bwan-nan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/05 14:46:58 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/05 14:49:50 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/06 14:53:48 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int		ft_tolower(int c)
 {
-	if (c >= 65 && c <= 90)
+	if (ft_isupper(c))
 		c += 32;
 	return (c);
 }
