@@ -1,18 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bwan-nan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/07 15:53:21 by bwan-nan          #+#    #+#             */
+/*   Updated: 2018/11/07 16:54:41 by bwan-nan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
+#include <stdlib.h>
 
-char    *ft_strdup(char *src)
+char	*ft_strdup(char *src)
 {
-    char *dest;
+	char *dest;
 
-    if (!(dest = (char *)malloc(sizeof(*dest) * (ft_strlen(src) + 1))))
-        return (0);
-    return (ft_strcpy(dest, src));
-}
-
-int main(int ac, char **av)
-{
-    if (ac == 2)
-        ft_putstr(ft_strdup(av[1]));
-    ft_putchar('\n');
-    return (0);
+	if (!(dest = (char *)malloc(sizeof(*dest) * (ft_strlen(src) + 1))))
+		return (0);
+	return (ft_strcpy(dest, src));
 }

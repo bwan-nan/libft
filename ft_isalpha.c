@@ -6,16 +6,16 @@
 /*   By: bwan-nan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 14:46:25 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/06 14:50:04 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/07 16:48:31 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_islpha(int c)
+int		ft_islpha(int c)
 {
-    if (ft_islower(c) || ft_isupper(c) || ft_isalpha(c))
-        return (1);
-    else
-        return (0);
+	if (ft_islower(c) || ft_isupper(c) || ft_isalpha(c))
+		return (1);
+	else
+		return (0);
 }

@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwan-nan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/05 14:46:58 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/07 16:49:27 by bwan-nan         ###   ########.fr       */
+/*   Created: 2018/11/07 16:34:25 by bwan-nan          #+#    #+#             */
+/*   Updated: 2018/11/07 17:23:08 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
-int		ft_tolower(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	if (ft_isupper(c))
-		c += 32;
-	return (c);
+	char	*str;
+	int		i;
+
+	i = 0;
+	str = s;
+	while (i < n)
+	{
+		str[i] = 0;
+		i++;
+	}
 }

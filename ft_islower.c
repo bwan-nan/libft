@@ -6,15 +6,15 @@
 /*   By: bwan-nan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 14:51:17 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/06 14:52:36 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/07 16:54:05 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_islower(int c)
+int		ft_islower(int c)
 {
-    if (c >= 97 && c <= 122)
-        return (512);
-    return (0);
+	if (c >= 97 && c <= 122)
+		return (512);
+	return (0);
 }

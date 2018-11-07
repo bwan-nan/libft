@@ -6,11 +6,11 @@
 /*   By: bwan-nan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/06 14:40:13 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/09/10 20:59:12 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/07 16:59:05 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char		*ft_strstr(char *haystack, const char *needle)
+char	*ft_strstr(char *haystack, const char *needle)
 {
 	int i;
 	int j;
