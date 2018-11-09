@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:57:53 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/07 17:57:55 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/08 20:20:23 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ void	*ft_memset(void *b, int c, size_t len)
 		str[i] = c;
 		i++;
 	}
-	return (str);
+	return (b);
 }
