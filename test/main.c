@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:58:45 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/08 20:13:02 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/09 17:53:27 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,15 @@
 
 int		main(void)
 {
-	char str[50];
-	char b[50];
 
-	ft_strcpy(str, "this is a simple test");
-	ft_putstr(memset(str + 4, '#', 5));
+	char *s1 = "MZIRIBMZIRIBMZP";
+	char *s2 = "MZIRIBMZP";
+	char *i1 = strstr(s1, s2);
+	char *i2 = ft_strstr(s1, s2);
+
+	ft_putstr(i1);
 	ft_putchar('\n');
-	ft_strcpy(b, "this is a simple test");
-	ft_putstr(ft_memset(b + 4, '#', 5));
+	ft_putstr(i2);
 	ft_putchar('\n');
 	return (0);
 }

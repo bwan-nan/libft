@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:54:15 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/08 18:18:38 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/09 17:36:51 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int		ft_isdigit(int c);
 int		ft_islower(int c);
 int		ft_isupper(int c);
 int		ft_isalpha(int c);
-int		ft_is_alnum(int c);
+int		ft_isalnum(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 void	*ft_memset(void *b, int c, size_t len);

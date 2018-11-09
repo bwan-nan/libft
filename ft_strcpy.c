@@ -6,9 +6,11 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:55:12 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/07 17:55:14 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/09 12:15:02 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strcpy(char *dest, char *src)
 {
