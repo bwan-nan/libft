@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:58:45 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/12 17:31:53 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/12 18:07:31 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int		main(int ac, char **av)
 {
-	printf("%s\n", memmove(av[1], av[2], ft_atoi(av[3])));
-	printf("%s", ft_memmove(av[1], av[2], ft_atoi(av[3])));
+	printf("%d\n", atoi(av[1]));
+	printf("%d", ft_atoi(av[1]));
 	return (0);
 }
