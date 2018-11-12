@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 17:54:51 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/12 10:24:54 by bwan-nan         ###   ########.fr       */
+/*   Created: 2018/11/12 11:50:59 by bwan-nan          #+#    #+#             */
+/*   Updated: 2018/11/12 17:06:13 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 #include "libft.h"
 
-int		ft_isprint(int c)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
+	size_t				i;
+	char				*s1;
+	const char			*s2;
+
+	i = 0;
+	s1 = (char *)dst;
+	s2 = (const char *)src;
+	while (i < n)
+	{
+		s1[i] = (unsigned char)s2[i];
+		if ((unsigned char)s2[i] == (unsigned char)c)
+			return (s1 + i + 1);
+		i++;
+	}
 	return (0);
 }

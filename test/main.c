@@ -6,24 +6,18 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:58:45 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/09 17:53:27 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/12 17:31:53 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <ctype.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-int		main(void)
+int		main(int ac, char **av)
 {
-
-	char *s1 = "MZIRIBMZIRIBMZP";
-	char *s2 = "MZIRIBMZP";
-	char *i1 = strstr(s1, s2);
-	char *i2 = ft_strstr(s1, s2);
-
-	ft_putstr(i1);
-	ft_putchar('\n');
-	ft_putstr(i2);
-	ft_putchar('\n');
+	printf("%s\n", memmove(av[1], av[2], ft_atoi(av[3])));
+	printf("%s", ft_memmove(av[1], av[2], ft_atoi(av[3])));
 	return (0);
 }
