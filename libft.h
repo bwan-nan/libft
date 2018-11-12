@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:54:15 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/09 17:36:51 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/10 09:30:15 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
-int		ft_strlen(char *str);
+int		ft_strlen(const char *str);
 void	ft_putnbr(int nb);
 char	*ft_strcpy(char *dest, char *src);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
