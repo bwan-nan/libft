@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:50:59 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/12 17:06:13 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/14 15:34:35 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 			return (s1 + i + 1);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

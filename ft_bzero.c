@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:57:37 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/07 17:57:38 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/14 13:01:57 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_bzero(void *s, size_t n)
 {
 	char	*str;
-	int		i;
+	size_t		i;
 
 	i = 0;
 	str = s;

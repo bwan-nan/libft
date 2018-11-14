@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:57:53 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/08 20:20:23 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/14 15:01:29 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	int				i;
+	size_t				i;
 	unsigned char	*str;
 
 	i = 0;
-	str = b;
+	str = (unsigned char *)b;
 	while (i < len)
 	{
-		str[i] = c;
+		str[i] = (unsigned char)c;
 		i++;
 	}
 	return (b);

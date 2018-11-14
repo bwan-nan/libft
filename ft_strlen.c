@@ -6,15 +6,16 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:53:45 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/10 09:30:31 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/14 13:59:36 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
-int		ft_strlen(const char *str)
+size_t		ft_strlen(const char *str)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (str[i])

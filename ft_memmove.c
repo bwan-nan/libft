@@ -5,29 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 17:22:09 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/12 17:49:52 by bwan-nan         ###   ########.fr       */
+/*   Created: 2018/11/14 13:44:53 by bwan-nan          #+#    #+#             */
+/*   Updated: 2018/11/14 14:46:18 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+#include <string.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int		i;
-	char	*_dst;
-	char	*original;
 	char	*_src;
+	char	*_dst;
+	size_t	i;
 
-	_dst = (char *)dst;
+	i = -1;
 	_src = (char *)src;
-	original = (char *)dst;
-	i = 0;
-	while (i < len)
-	{
-		_dst[i] = _src[i];
-		i++;
-	}
-	return (original);
+	_dst = (char *)dst;
+	if (_src < _dst)
+		while (len--)
+			_dst[len] = _src[len];
+	else
+		while (++i < len)
+			_dst[i] = _src[i];
+	return (dst);
+
 }

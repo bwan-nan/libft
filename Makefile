@@ -6,7 +6,7 @@
 #    By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 17:52:27 by bwan-nan          #+#    #+#              #
-#    Updated: 2018/11/09 18:14:44 by bwan-nan         ###   ########.fr        #
+#    Updated: 2018/11/14 13:01:18 by bwan-nan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ HEADER = ./libft.h
 all: $(NAME)
 
 $(NAME):
-	gcc -c $(SRC)
+	gcc -Wall -Werror -Wextra -c $(SRC)
 	ar rc $(NAME) *.o
 	/bin/rm -f *.o
 
