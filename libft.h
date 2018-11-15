@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:54:15 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/15 16:07:13 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/15 17:25:25 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void		ft_putchar(int c);
 void		ft_putstr(char *str);
 size_t		ft_strlen(const char *str);
 void		ft_putnbr(int nb);
-char		*ft_strcpy(char *dest, char *src);
+char		*ft_strcpy(char *dest, const char *src);
 char		*ft_strncpy(char *dest, const char *src, size_t n);
 int			ft_strcmp(const char *s1, const char *s2);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -29,7 +29,7 @@ int			ft_atoi(const char *nptr);
 char		*ft_strcat(char *s1, const char *s2);
 char		*ft_strncat(char *s1, const char *s2, size_t n);
 size_t		ft_strlcat(char *s1, const char *s2, size_t dstsize);
-char		*ft_strdup(char *src);
+char		*ft_strdup(const char *src);
 int			ft_isascii(int c);
 int			ft_isprint(int c);
 int			ft_isdigit(int c);
@@ -54,7 +54,13 @@ char		*ft_strnew(size_t size);
 void		ft_strdel(char **as);
 void		ft_strclr(char *s);
 void		ft_striter(char *s, void (*f)(char *));
-void		ft_striteri(char *s, void (*f)(unsigned char *));
+void		ft_striteri(char *s, void (*f)(unsigned int, char *));
 char		*ft_strmap(char const *s, char (*f)(char));
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+int			ft_strequ(char const *s1, char const *s2);
+int			ft_strnequ(char const *s1, char const *s2, size_t n);
+char		*ft_strsub(char const *s, unsigned int start, size_t len);
+char		*ft_strjoin(char const *s1, char const *s2);
+char		*ft_strtrim(char const *s);
 
 #endif
