@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:54:15 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/15 11:04:22 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/15 15:04:19 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <string.h>
 
-void		ft_putchar(char c);
+void		ft_putchar(int c);
 void		ft_putstr(char *str);
 size_t		ft_strlen(const char *str);
 void		ft_putnbr(int nb);
