@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:58:22 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/14 19:22:20 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/15 10:24:08 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,44 +34,43 @@ size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
 		return (ft_strlen(src) + dstsize);
 	else
 		return (ft_strlen(src) + dst_len);
-	
 }
 /*
-int main(void)
-{
-	char a[80];
-	char b[80];
-	char c[80];
-	char d[80];
-	char e[80];
-	char f[80];
+   int main(void)
+   {
+   char a[80];
+   char b[80];
+   char c[80];
+   char d[80];
+   char e[80];
+   char f[80];
 
-	ft_strcpy(a, "Bonjour c un test");
-	ft_strcpy(b, "Salut tout le monde");
-	ft_strcpy(c, "Bonjour c un test");
-	ft_strcpy(d, "Salut tout le monde");
-	ft_strcpy(e, "Bonjour c un test");
-	ft_strcpy(f, "Salut tout le monde");
+   ft_strcpy(a, "Bonjour c un test");
+   ft_strcpy(b, "Salut tout le monde");
+   ft_strcpy(c, "Bonjour c un test");
+   ft_strcpy(d, "Salut tout le monde");
+   ft_strcpy(e, "Bonjour c un test");
+   ft_strcpy(f, "Salut tout le monde");
 
 
-	ft_putstr("strlen(dst) = ");
-	ft_putnbr(ft_strlen(a));
-	ft_putchar('\n');
+   ft_putstr("strlen(dst) = ");
+   ft_putnbr(ft_strlen(a));
+   ft_putchar('\n');
 
-	ft_putstr("strlen(src) = ");
-	ft_putnbr(ft_strlen(b));
-	ft_putchar('\n');
+   ft_putstr("strlen(src) = ");
+   ft_putnbr(ft_strlen(b));
+   ft_putchar('\n');
 
-	ft_putstr("strncat : ");
-	ft_putstr(strncat(a, b, 50));
-	ft_putchar('\n');
+   ft_putstr("strncat : ");
+   ft_putstr(strncat(a, b, 50));
+   ft_putchar('\n');
 
-	ft_putstr("ft_strlen(strncat()) : ");
-	ft_putnbr(ft_strlen(strncat(c, d, 50)));
-	ft_putchar('\n');
+   ft_putstr("ft_strlen(strncat()) : ");
+   ft_putnbr(ft_strlen(strncat(c, d, 50)));
+   ft_putchar('\n');
 
-	ft_putstr("strlcat : ");
-	ft_putnbr(strlcat(e, f, 50));
-	return (0);
-}
-*/
+   ft_putstr("strlcat : ");
+   ft_putnbr(strlcat(e, f, 50));
+   return (0);
+   }
+   */

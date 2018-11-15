@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 13:44:53 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/15 10:19:49 by bwan-nan         ###   ########.fr       */
+/*   Created: 2018/11/15 10:27:41 by bwan-nan          #+#    #+#             */
+/*   Updated: 2018/11/15 10:33:34 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
 #include <string.h>
+#include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strchr(const char *s, int c)
 {
-	char	*src2;
-	char	*dst2;
-	size_t	i;
+	size_t n;
 
-	i = -1;
-	src2 = (char *)src;
-	dst2 = (char *)dst;
-	if (src2 < dst2)
-		while (len--)
-			dst2[len] = src2[len];
-	else
-		while (++i < len)
-			dst2[i] = src2[i];
-	return (dst);
+	n = ft_strlen(s) + 1;
+	return (ft_memchr(s, c, n));
 }

@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:55:56 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/14 13:22:31 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/15 10:23:24 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int		ft_atoi(const char *nptr)
 {
-	int i;
-	int j;
-	int sign;
-	unsigned long result;
+	int				i;
+	int				j;
+	int				sign;
+	unsigned long	result;
 
 	i = 0;
 	j = -1;
