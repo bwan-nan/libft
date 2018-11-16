@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_show_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/15 17:14:41 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/16 12:19:10 by bwan-nan         ###   ########.fr       */
+/*   Created: 2018/11/16 15:26:38 by bwan-nan          #+#    #+#             */
+/*   Updated: 2018/11/16 17:30:00 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+void	ft_show_tab(char **tab)
 {
-	char *str;
+	int i;
 
-	if (!s)
-		return (NULL);
-	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
-		return (NULL);
-	ft_bzero(str, len + 1);
-	ft_strncpy(str, s + start, len);
-	return (str);
+	i = 0;
+	while (tab[i])
+	{
+		ft_putstr(tab[i]);
+		ft_putchar('\n');
+		i++;
+	}
 }

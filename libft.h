@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:54:15 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/15 17:25:25 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/16 17:57:17 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include <string.h>
 
-void		ft_putchar(int c);
-void		ft_putstr(char *str);
+void		ft_putchar(char c);
+void		ft_putstr(char const *str);
 size_t		ft_strlen(const char *str);
 void		ft_putnbr(int nb);
 char		*ft_strcpy(char *dest, const char *src);
@@ -62,5 +62,13 @@ int			ft_strnequ(char const *s1, char const *s2, size_t n);
 char		*ft_strsub(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s);
+char		**ft_strsplit(char const *s, char c);
+void		ft_show_tab(char **tab);
+char		*ft_itoa(int n);
+void		ft_putendl(char const *s);
+void		ft_putchar_fd(char c, int fd);
+void		ft_putstr_fd(char const *s, int fd);
+void		ft_putendl_fd(char const *s, int fd);
+void		ft_putnbr_fd(int n, int fd);
 
 #endif

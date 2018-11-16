@@ -6,13 +6,13 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:56:31 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/09 17:00:23 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/16 17:57:36 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char *str)
+void	ft_putstr(char const *str)
 {
 	int i;
 
