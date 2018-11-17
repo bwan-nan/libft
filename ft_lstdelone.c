@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 17:04:05 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/09 17:07:20 by bwan-nan         ###   ########.fr       */
+/*   Created: 2018/11/17 21:59:16 by bwan-nan          #+#    #+#             */
+/*   Updated: 2018/11/17 22:02:56 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <stdlib.h>
+#include "libft.h"
 
-int main(int ac, char **av)
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
-	if (ac > 1)
-	{
-		ft_putnbr(ft_atoi(av[1]));
-		ft_putchar('\n');
-		ft_putnbr(atoi(av[1]));
-	}
-	return (0);
+	if (*alst)
+		(*del)((*alst)->content, (*alst)->content_size);
+	ft_memdel((void **)alst);
 }

@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/16 17:50:09 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/17 19:44:57 by bwan-nan         ###   ########.fr       */
+/*   Created: 2018/11/17 22:19:32 by bwan-nan          #+#    #+#             */
+/*   Updated: 2018/11/17 22:21:00 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 #include "libft.h"
-#include <unistd.h>
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	write(fd, &c, 1);
+	if (*alst)
+	{
+		ft_lstdel(&(*alst)->next, del);
+		ft_lstdelone(alst, del);
+	}
 }

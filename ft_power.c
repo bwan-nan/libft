@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_power.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/16 17:50:09 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/17 19:44:57 by bwan-nan         ###   ########.fr       */
+/*   Created: 2018/11/17 20:22:57 by bwan-nan          #+#    #+#             */
+/*   Updated: 2018/11/17 20:23:20 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-void	ft_putchar_fd(char c, int fd)
+float		ft_power(int nb, int exp)
 {
-	write(fd, &c, 1);
+	float		result;
+
+	if (exp == 0)
+		return (1);
+	result = ft_power(nb, exp / 2);
+	if (exp % 2 == 0)
+		return (result * result);
+	else
+	{
+		if (exp > 0)
+			return (nb * result * result);
+		else
+			return (result * result) / nb;
+	}
 }
