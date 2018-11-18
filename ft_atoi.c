@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:55:56 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/17 21:37:44 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/18 20:29:52 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ int		ft_atoi(const char *nptr)
 	j = -1;
 	sign = 1;
 	result = 0;
-	if (!nptr)
-		return (0);
 	while (ft_iswhitespace(nptr[i]))
 		i++;
 	if (nptr[i] == '-' || nptr[i] == '+')
