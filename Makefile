@@ -6,13 +6,13 @@
 #    By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 17:52:27 by bwan-nan          #+#    #+#              #
-#    Updated: 2018/11/18 20:52:18 by bwan-nan         ###   ########.fr        #
+#    Updated: 2018/11/19 18:22:08 by bwan-nan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC = ./*.c
+SRC = *.c 
 
 HEADER = ./libft.h
 
@@ -22,7 +22,6 @@ $(NAME):
 	gcc -Wall -Werror -Wextra -c $(SRC)
 	ar rc $(NAME) *.o
 	ranlib $(NAME)
-	/bin/rm -f *.o
 
 clean:
 	/bin/rm -f *.o

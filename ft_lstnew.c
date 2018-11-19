@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 21:43:58 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/17 21:57:21 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/19 11:46:42 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	if (content)
 	{
 		if (!(list->content = (void*)ft_memalloc(content_size)))
-			return(NULL);
+			return (NULL);
 		ft_memcpy(list->content, content, content_size);
 		list->content_size = content_size;
 	}

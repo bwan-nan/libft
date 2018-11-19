@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/15 16:32:10 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/19 18:33:08 by bwan-nan         ###   ########.fr       */
+/*   Created: 2018/11/19 16:43:40 by bwan-nan          #+#    #+#             */
+/*   Updated: 2018/11/19 17:50:20 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	unsigned int i;
+	t_list *new;
+	t_list *tmp;
 
-	i = 0;
-	if (s && f)
+	if (!lst)
+		return (NULL);
+	if (!(new = ft_lstnew(f(lst)->content, f(lst)->content_size)))
 	{
-		while (s[i])
-		{
-			f(i, &s[i]);
-			i++;
-		}
+		free(new);
+		return (NULL);
 	}
+	tmp = new;
+	while (lst->next)
+	{
+		lst = lst->next;
+		if (!(tmp->next = ft_lstnew(f(lst)->content, f(lst)->content_size)))
+		{
+			free(tmp->next);
+			return (NULL);
+		}
+		tmp = tmp->next;
+	}
+	return (new);
 }
