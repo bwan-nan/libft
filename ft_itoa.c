@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrameau <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/28 02:04:57 by jrameau           #+#    #+#             */
-/*   Updated: 2018/11/19 18:03:12 by bwan-nan         ###   ########.fr       */
+/*   Created: 2018/11/20 12:15:58 by bwan-nan          #+#    #+#             */
+/*   Updated: 2018/11/20 13:28:10 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static size_t	get_str_len(int n)
 {
@@ -24,23 +25,23 @@ static size_t	get_str_len(int n)
 
 char			*ft_itoa(int n)
 {
-	char			*str;
-	size_t			str_len;
-	unsigned int	n_cpy;
+	char		*str;
+	size_t		str_len;
+	int			sign;
 
+	sign = 1;
 	str_len = get_str_len(n);
-	n_cpy = n;
 	if (n < 0)
 	{
-		n_cpy = -n;
+		sign = -1;
 		str_len++;
 	}
 	if (!(str = ft_strnew(str_len)))
 		return (NULL);
-	str[--str_len] = n_cpy % 10 + '0';
-	while (n_cpy /= 10)
-		str[--str_len] = n_cpy % 10 + '0';
-	if (n < 0)
-		*(str + 0) = '-';
+	str[--str_len] = n % 10 * sign + 48;
+	while (n /= 10)
+		str[--str_len] = n % 10 * sign + 48;
+	if (sign == -1)
+		str[0] = '-';
 	return (str);
 }

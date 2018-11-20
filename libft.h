@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:54:15 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/19 11:50:47 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/20 13:56:58 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,13 @@ char				*ft_strcpy(char *dest, const char *src);
 char				*ft_strncpy(char *dest, const char *src, size_t n);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
-char				*ft_strstr(char *haystack, const char *needle);
+char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strnstr(const char *haystack,
 					const char *needle, size_t len);
 int					ft_atoi(const char *nptr);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
-size_t				ft_strlcat(char *s1, const char *s2, size_t dstsize);
+size_t				ft_strlcat(char *s1, const char *s2, size_t size);
 char				*ft_strdup(const char *src);
 int					ft_iswhitespace(int c);
 int					ft_isascii(int c);
