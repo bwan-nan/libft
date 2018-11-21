@@ -6,13 +6,13 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 20:22:57 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/17 22:35:59 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/11/21 11:54:06 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-float		ft_power(int nb, int exp)
+float		ft_power(float nb, int exp)
 {
 	float		result;
 
@@ -26,6 +26,6 @@ float		ft_power(int nb, int exp)
 		if (exp > 0)
 			return (nb * result * result);
 		else
-			return (result * result) / nb;
+			return (result * result / nb);
 	}
 }
