@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/21 11:56:09 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/12/03 13:15:08 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2018/12/26 12:16:44 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,10 @@ int				get_next_line(const int fd, char **line)
 		else
 			*line = ft_strsub(str, 0, i);
 		if (ft_strchr(str, '\n'))
-		{
 				str = ft_strdup(ft_strchr(str, '\n') + 1);
-				free(tmp);
-		}
 		else
 			str = ft_strnew(0); 
+		free(tmp);
 		return (1);
 	}
 	return (0);
