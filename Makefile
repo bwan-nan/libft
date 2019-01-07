@@ -6,7 +6,7 @@
 #    By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 17:52:27 by bwan-nan          #+#    #+#              #
-#    Updated: 2018/12/27 21:13:37 by bwan-nan         ###   ########.fr        #
+#    Updated: 2019/01/08 00:30:36 by bwan-nan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,14 +29,19 @@ HEADER = ./libft.h
 all: $(NAME)
 
 $(NAME):
-	gcc -Wall -Werror -Wextra -c $(SRC)
-	ar rc $(NAME) *.o
-	ranlib $(NAME)
+	@gcc -Wall -Werror -Wextra -c $(SRC)
+	@ar rc $(NAME) *.o
+	@ranlib $(NAME)
+	@echo "\033[1;34mLibft\t\t\033[1;33mCompilation\t\033[0;32m[OK]\033[0m"
 
 clean:
-	/bin/rm -f *.o
+	@/bin/rm -f *.o
+	@echo "\033[1;34mLibft\t\t\033[1;33mCleaning obj\t\033[0;32m[OK]\033[0m"
+
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	@/bin/rm -f $(NAME)
+	@echo "\033[1;34mLibft\t\t\033[1;33mCleaning lib\t\033[0;32m[OK]\033[0m"
+
 
 re: fclean all
