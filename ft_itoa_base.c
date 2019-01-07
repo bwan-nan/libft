@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/27 21:01:43 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/01/08 00:34:05 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2019/01/08 00:40:37 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,9 @@ char			*ft_itoa_base(int value, int base)
 	if (value == 0 || base < 2 || base > 16)
 		return ("0");
 	str_len = get_str_len(value, base);
-	if (value < 0)
+	if (value < 0 && base == 10)
 	{
-		if (base == 10)
-			str_len++;
+		str_len++;
 		sign = -1;
 	}
 	if (!(str = ft_strnew(str_len)))
