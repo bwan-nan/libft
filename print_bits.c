@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/27 19:54:22 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/12/27 19:55:57 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2019/01/07 14:48:43 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	print_bits(unsigned char octet)
 {
-	int		i;
+	int				i;
 	unsigned char	bit;
 
 	i = 8;

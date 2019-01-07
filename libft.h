@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:54:15 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/12/27 21:14:09 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2019/01/07 14:46:25 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstclr(t_list *alst);
 char				**ft_split_whitespaces(char *str);
-int				get_next_line(const int fd, char **line);
+int					get_next_line(const int fd, char **line);
 void				*ft_realloc(void *ptr, size_t size);
 void				ft_putnbrendl(int nb);
 char				*ft_itoa_base(int value, int base);

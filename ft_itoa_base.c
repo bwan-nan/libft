@@ -6,16 +6,16 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/27 21:01:43 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/12/28 14:32:49 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2019/01/07 14:36:30 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static size_t	get_str_len(int n, int base)
+static int		get_str_len(int n, int base)
 {
-	size_t		i;
+	int		i;
 
 	i = 0;
 	while (n)
@@ -26,12 +26,12 @@ static size_t	get_str_len(int n, int base)
 	return (i);
 }
 
-char		*ft_itoa_base(int value, int base)
+char			*ft_itoa_base(int value, int base)
 {
-	size_t	str_len;
+	int		str_len;
 	char	*str;
 	char	base_string[17];
-	
+
 	ft_strcpy(base_string, "0123456789ABCDEF");
 	if (value == 0 || base < 2 || base > 16)
 		return ("0");

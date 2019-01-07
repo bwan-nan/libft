@@ -6,15 +6,13 @@
 /*   By: bwan-nan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 16:56:31 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/09/18 00:42:58 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2019/01/07 14:45:27 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void    ft_show_tab(char **tab);
-
-int		count_words(char *str)
+int			count_words(char *str)
 {
 	int i;
 	int num_words;
@@ -34,7 +32,7 @@ int		count_words(char *str)
 	return (num_words);
 }
 
-void	ft_fill_tab(char *tab, char *str, int l_count)
+void		ft_fill_tab(char *tab, char *str, int l_count)
 {
 	int i;
 	int j;
@@ -50,7 +48,7 @@ void	ft_fill_tab(char *tab, char *str, int l_count)
 	tab[j] = '\0';
 }
 
-char	*ft_create_tab(char *str, int n)
+char		*ft_create_tab(char *str, int n)
 {
 	int		i;
 	int		k;
@@ -79,7 +77,7 @@ char	*ft_create_tab(char *str, int n)
 	return (tab);
 }
 
-char	**ft_split_whitespaces(char *str)
+char		**ft_split_whitespaces(char *str)
 {
 	int		j;
 	int		num_words;
