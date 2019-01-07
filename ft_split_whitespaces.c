@@ -6,13 +6,13 @@
 /*   By: bwan-nan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 16:56:31 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/01/07 14:45:27 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2019/01/08 00:53:47 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int			count_words(char *str)
+static int	count_words(char *str)
 {
 	int i;
 	int num_words;
@@ -23,7 +23,7 @@ int			count_words(char *str)
 	len = 0;
 	while (str[i])
 	{
-		if (str[i] < 33)
+		if (is_whitespace(str[i])
 			len = 0;
 		else if (++len == 1)
 			num_words++;
@@ -32,66 +32,30 @@ int			count_words(char *str)
 	return (num_words);
 }
 
-void		ft_fill_tab(char *tab, char *str, int l_count)
+char		**ft_split(char *str)
 {
-	int i;
-	int j;
+	char	**tab;
+	int	i;
+	int	len;
+	int	word_index;
 
+	word_index = 0;
+	if (!(tab = (char **)malloc(sizeof(char *) * (count_words(str) + 1))))
+		return (NULL);
 	i = 0;
-	j = 0;
-	while (j < l_count)
-	{
-		tab[j] = str[i];
-		i++;
-		j++;
-	}
-	tab[j] = '\0';
-}
-
-char		*ft_create_tab(char *str, int n)
-{
-	int		i;
-	int		k;
-	int		l_count;
-	char	*tab;
-
-	i = 0;
-	k = 0;
 	while (str[i])
 	{
-		l_count = 0;
-		while (str[i] < 33)
-			i++;
-		while (!(str[i] < 33))
+		len = 0;
+		while (!(is_whitespace(str[i + len])) && str[i + len])
+			len++;
+		if (len)
 		{
-			l_count++;
-			i++;
+			tab[word_index] = ft_strsub(str, i, len);
+			word_index++;
+			i += len - 1;
 		}
-		k++;
-		if (k == n)
-		{
-			tab = malloc(sizeof(char) * (l_count + 1));
-			ft_fill_tab(tab, (str + i - l_count), l_count);
-		}
+		i++;
 	}
-	return (tab);
-}
-
-char		**ft_split_whitespaces(char *str)
-{
-	int		j;
-	int		num_words;
-	char	**tab;
-
-	j = 0;
-	num_words = count_words(str);
-	if (!(tab = malloc(sizeof(char*) * (num_words + 1))))
-		return (0);
-	while (j < num_words)
-	{
-		tab[j] = ft_create_tab(str, (j + 1));
-		j++;
-	}
-	tab[j] = 0;
+	tab[word_index] = 0;
 	return (tab);
 }
