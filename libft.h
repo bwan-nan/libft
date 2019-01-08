@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:54:15 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/01/08 17:38:47 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2019/01/08 17:48:26 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 
 /*
-** *********************** 42-specific functions *********************************
+** *********************** 42-specific functions ******************************
 */
 
 char				*ft_strnew(size_t size);
@@ -94,7 +94,7 @@ void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
 /*
-** *********************** Linked-list functions ********************************
+** *********************** Linked-list functions ******************************
 */
 
 t_list				*ft_lstnew(void const *content, size_t content_size);

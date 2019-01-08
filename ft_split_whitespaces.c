@@ -6,13 +6,14 @@
 /*   By: bwan-nan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 16:56:31 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/01/08 00:53:47 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2019/01/08 17:48:09 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
-static int	count_words(char *str)
+static int		count_words(char *str)
 {
 	int i;
 	int num_words;
@@ -23,7 +24,7 @@ static int	count_words(char *str)
 	len = 0;
 	while (str[i])
 	{
-		if (is_whitespace(str[i])
+		if (ft_iswhitespace(str[i]))
 			len = 0;
 		else if (++len == 1)
 			num_words++;
@@ -32,12 +33,12 @@ static int	count_words(char *str)
 	return (num_words);
 }
 
-char		**ft_split(char *str)
+char			**ft_split(char *str)
 {
 	char	**tab;
-	int	i;
-	int	len;
-	int	word_index;
+	int		i;
+	int		len;
+	int		word_index;
 
 	word_index = 0;
 	if (!(tab = (char **)malloc(sizeof(char *) * (count_words(str) + 1))))
@@ -46,7 +47,7 @@ char		**ft_split(char *str)
 	while (str[i])
 	{
 		len = 0;
-		while (!(is_whitespace(str[i + len])) && str[i + len])
+		while (!(ft_iswhitespace(str[i + len])) && str[i + len])
 			len++;
 		if (len)
 		{
