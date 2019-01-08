@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:54:15 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/01/08 00:26:10 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2019/01/08 17:38:47 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,21 @@
 
 # include <string.h>
 
+/*
+** *********************** Structures definition ******************************
+*/
+
 typedef struct		s_list
 {
 	void			*content;
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+/*
+** ************************* Libc functions ***********************************
+*/
+
 void				ft_putchar(char c);
 void				ft_putstr(char const *str);
 size_t				ft_strlen(const char *str);
@@ -58,6 +67,11 @@ char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
+
+/*
+** *********************** 42-specific functions *********************************
+*/
+
 char				*ft_strnew(size_t size);
 void				ft_strdel(char **as);
 void				ft_strclr(char *s);
@@ -78,7 +92,11 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-float				ft_power(float nb, int exp);
+
+/*
+** *********************** Linked-list functions ********************************
+*/
+
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
@@ -86,10 +104,15 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstclr(t_list *alst);
+
+/*
+** **************************** BONUS ******************************************
+*/
+
 char				**ft_split_whitespaces(char *str);
-int					get_next_line(const int fd, char **line);
 void				*ft_realloc(void *ptr, size_t size);
 void				ft_putnbrendl(int nb);
 char				*ft_itoa_base(int value, int base);
+float				ft_power(float nb, int exp);
 
 #endif
