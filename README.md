@@ -5,6 +5,7 @@ My implementation of some of the Standard C Library functions including some add
 * [What is libft?](#what-is-libft)
 * [What's in it?](#whats-in-it)
 * [How does it work?](#how-does-it-work)
+* [Usage](#usage-example)
 
 ### What is libft?
 Libft [(see PDF)][1] is an individual project at [42][2] that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
@@ -18,7 +19,7 @@ As you can see from the [Project instructions][1], there are 4 sections:
 1.  **Libc Functions:** Some of the standard C functions
 2.  **Additional functions:** Functions 42 deems will be useful for later projects
 3.  **Bonus Functions:** Functions 42 deems will be useful for linked list manipulation
-4.  **Personal Functions:** Functions I believe will be useful later. [Documented here][3].
+4.  **Personal Functions:** Functions I believe will be useful later.
 
 Libc functions | Additional functions | Bonus Functions | Personal Functions
 :----------- | :-----------: | :-----------: | -----------:
@@ -73,8 +74,30 @@ You should see a *libft.a* file and some object files (.o).
 
     make clean
 
+From there, you can basically call any of the functions present in my libft in another program.
 
-## Usage examples
+### Usage example 
+
+Here's a basic example:
+If you create a file named **example.c** and write the following code:
+
+	#include "libft.h"
+	
+	int main(void)
+	{
+		ft_putstr("Hello world\n");
+		return (0);
+	}
+
+You can then compile it with **libft.a** using this command:
+
+	clang -Wall -Werror -Wextra example.c libft.a -I inc -o example
+
+Finally, running **./example | cat -e** should display:
+	
+	Hello world$
+
+## Concrete usage
 
 This is a list of my projects that use Libft extensively:
 
