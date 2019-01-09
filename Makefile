@@ -6,13 +6,13 @@
 #    By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 17:52:27 by bwan-nan          #+#    #+#              #
-#    Updated: 2019/01/08 00:30:36 by bwan-nan         ###   ########.fr        #
+#    Updated: 2019/01/09 18:01:44 by bwan-nan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC = 	ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
+FILES = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	ft_isdigit.c ft_islower.c ft_isprint.c ft_isupper.c ft_iswhitespace.c \
 	ft_itoa.c ft_lstadd.c ft_lstclr.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c \
 	ft_memalloc.c ft_memalloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
@@ -24,12 +24,14 @@ SRC = 	ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	ft_strnstr.c ft_strrchr.c ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c \
 	ft_toupper.c ft_realloc.c ft_putnbrendl.c get_next_line.c ft_itoa_base.c 
 
-HEADER = ./libft.h
+SRC = $(addprefix ./src/, $(FILES))
+
+HEADERS = -I inc
 
 all: $(NAME)
 
 $(NAME):
-	@gcc -Wall -Werror -Wextra -c $(SRC)
+	@clang -Wall -Werror -Wextra $(HEADERS) -c $(SRC)
 	@ar rc $(NAME) *.o
 	@ranlib $(NAME)
 	@echo "\033[1;34mLibft\t\t\033[1;33mCompilation\t\033[0;32m[OK]\033[0m"
