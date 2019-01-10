@@ -1,4 +1,7 @@
-# Libft - @42Born2Code
+# Libft
+
+### 42 - Implementing our own Library in C
+
 My implementation of some of the Standard C Library functions including some additional ones.
 
 ### Table Of Contents
@@ -8,9 +11,9 @@ My implementation of some of the Standard C Library functions including some add
 * [Usage](#usage-example)
 
 ### What is libft?
-Libft [(see PDF)][1] is an individual project at [42][2] that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
+Libft [(see PDF)][1] is an individual project at 42 that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the curriculum.
 
-Disclaimer: *Reinventing the wheel is not something we do for fun. 42 makes us do this just so we can have a deeper understanding of data structures and basic algorithms. At 42 we're not allowed to use some standard libraries on our projects, so we have to keep growing this library with our own functions as we go farther in the program.*
+Disclaimer: *Reinventing the wheel is not something we do for fun. 42 makes us do this just so we can have a deeper understanding of data structures and basic algorithms. At 42 we're not allowed to use some standard libraries on our projects, so we have to keep growing this library with our own functions as we go further in the curriculum.*
 
 ### What's in it?
 
@@ -107,4 +110,3 @@ This is a list of my projects that use Libft extensively:
 
 
 [1]: https://github.com/bwan-nan/libft/blob/master/libft.en.pdf "Libft PDF"
-[2]: https://www.42.fr/ "42 Paris"
