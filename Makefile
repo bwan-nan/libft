@@ -6,7 +6,7 @@
 #    By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 17:52:27 by bwan-nan          #+#    #+#              #
-#    Updated: 2019/01/30 11:38:09 by bwan-nan         ###   ########.fr        #
+#    Updated: 2019/01/30 13:51:14 by bwan-nan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ FILES = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	ft_strmap.c ft_strmapi.c ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strnequ.c ft_strnew.c \
 	ft_strnstr.c ft_strrchr.c ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c \
 	ft_toupper.c ft_realloc.c ft_putnbrendl.c get_next_line.c ft_itoa_base.c \
-	ft_lst_mergesort.c ft_lst_bubblesort.c sort_int_tab.c
+	ft_lst_mergesort.c ft_lst_bubblesort.c sort_int_tab.c ft_lstrev.c
 
 SRC = $(addprefix ./src/, $(FILES))
 

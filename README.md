@@ -37,7 +37,7 @@ strlen		   | ft_strmap		 |				       | get_next_line
 strdup		   | ft_strmapi	   |				       | sort_int_tab 
 strcpy		   | ft_strequ		 |			       	 | ft_lst_bubblesort
 strncpy		   | ft_strnequ	   |			         | ft_lst_mergesort
-strcat		   | ft_strsub		 |               | 
+strcat		   | ft_strsub		 |               | ft_lstrev 
 strlcat		   | ft_strjoin	   |               | 
 strchr		   | ft_strtrim	   |               | 
 strrchr	     | ft_strsplit   |               | 

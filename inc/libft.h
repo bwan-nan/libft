@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:54:15 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/01/30 11:39:01 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2019/01/30 13:50:45 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstclr(t_list *alst);
 void				ft_lst_mergesort(t_list **source, int (*cmp)(void *, void *));
 t_list				*ft_lst_bubblesort(t_list *lst, int (*cmp)(void *, void *));
+void				ft_lstrev(t_list **alst);
 
 /*
 ** **************************** BONUS ******************************************
