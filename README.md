@@ -34,9 +34,9 @@ memmove		   | ft_strclr		 | ft_lstiter	   | ft_itoa_base
 memchr		   | ft_striter	   | ft_lstmap		 | ft_split_whitespaces
 memcmp	   	 | ft_striteri	 |				       | ft_show_tab
 strlen		   | ft_strmap		 |				       | get_next_line
-strdup		   | ft_strmapi	   |				       | 
-strcpy		   | ft_strequ		 |			       	 | 
-strncpy		   | ft_strnequ	   |			         | 
+strdup		   | ft_strmapi	   |				       | sort_int_tab 
+strcpy		   | ft_strequ		 |			       	 | ft_lst_bubblesort
+strncpy		   | ft_strnequ	   |			         | ft_lst_mergesort
 strcat		   | ft_strsub		 |               | 
 strlcat		   | ft_strjoin	   |               | 
 strchr		   | ft_strtrim	   |               | 
