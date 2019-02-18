@@ -6,45 +6,134 @@
 #    By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 17:52:27 by bwan-nan          #+#    #+#              #
-#    Updated: 2019/01/30 13:51:14 by bwan-nan         ###   ########.fr        #
+#    Updated: 2019/02/18 20:35:40 by bwan-nan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-FILES = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
-	ft_isdigit.c ft_islower.c ft_isprint.c ft_isupper.c ft_iswhitespace.c \
-	ft_itoa.c ft_lstadd.c ft_lstclr.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c \
-	ft_memalloc.c ft_memalloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
-	ft_memdel.c ft_memmove.c ft_memset.c ft_power.c ft_putchar.c ft_putchar_fd.c \
-	ft_putendl.c ft_putendl_fd.c ft_putnbr.c ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c \
-	ft_show_tab.c ft_strcat.c ft_strchr.c ft_strclr.c ft_strcmp.c ft_strcpy.c ft_strdel.c \
-	ft_strdup.c ft_strequ.c ft_striter.c ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlen.c \
-	ft_strmap.c ft_strmapi.c ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strnequ.c ft_strnew.c \
-	ft_strnstr.c ft_strrchr.c ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c \
-	ft_toupper.c ft_realloc.c ft_putnbrendl.c get_next_line.c ft_itoa_base.c \
-	ft_lst_mergesort.c ft_lst_bubblesort.c sort_int_tab.c ft_lstrev.c
+CC = Clang
+CFLAGS = -Wall -Werror -Wextra
+IFLAGS = -I $(IPATH)
+COMPILE = $(CC) -c
+MKDIR = mkdir -p
+CLEANUP = /bin/rm -rf
 
-SRC = $(addprefix ./src/, $(FILES))
+# Regular Colors
+CYAN =\033[0;36m
+BLUE=\033[0;34m
+GREEN=\033[32m
+RED=\033[0;31m
+WHITE=\033[0;37m
+PURPLE=\033[0;35m
+YELLOW=\033[0;33m
 
-HEADERS = -I inc
+NC=\033[0m
 
-all: $(NAME)
+vpath %.c src/
+vpath %.h inc/
 
-$(NAME):
-	@clang -Wall -Werror -Wextra $(HEADERS) -c $(SRC)
-	@ar rc $(NAME) *.o
-	@ranlib $(NAME)
-	@echo "\033[1;34mLibft\t\t\033[1;33mCompilation\t\033[0;32m[OK]\033[0m"
+SRC += ft_atoi.c
+SRC += ft_bzero.c
+SRC += ft_isalnum.c
+SRC += ft_isalpha.c
+SRC += ft_isascii.c
+SRC += ft_isdigit.c
+SRC += ft_islower.c
+SRC += ft_isprint.c
+SRC += ft_isupper.c
+SRC += ft_iswhitespace.c
+SRC += ft_itoa.c
+SRC += ft_lstadd.c
+SRC += ft_lstclr.c
+SRC += ft_lstdel.c
+SRC += ft_lstdelone.c
+SRC += ft_lstiter.c
+SRC += ft_memalloc.c
+SRC += ft_memccpy.c
+SRC += ft_memchr.c
+SRC += ft_memcmp.c
+SRC += ft_memcpy.c
+SRC += ft_memdel.c
+SRC += ft_memmove.c
+SRC += ft_memset.c
+SRC += ft_power.c
+SRC += ft_putchar.c
+SRC += ft_putchar_fd.c
+SRC += ft_putendl.c
+SRC += ft_putendl_fd.c
+SRC += ft_putnbr.c
+SRC += ft_putnbr_fd.c
+SRC += ft_putstr.c
+SRC += ft_putstr_fd.c
+SRC += ft_show_tab.c
+SRC += ft_strcat.c
+SRC += ft_strchr.c
+SRC += ft_strclr.c
+SRC += ft_strcmp.c
+SRC += ft_strcpy.c
+SRC += ft_strdel.c
+SRC += ft_strdup.c
+SRC += ft_strequ.c
+SRC += ft_striter.c
+SRC += ft_striteri.c
+SRC += ft_strjoin.c
+SRC += ft_strlcat.c
+SRC += ft_strlen.c
+SRC += ft_strmap.c
+SRC += ft_strmapi.c
+SRC += ft_strncat.c
+SRC += ft_strncmp.c
+SRC += ft_strncpy.c
+SRC += ft_strnequ.c
+SRC += ft_strnew.c
+SRC += ft_strnstr.c
+SRC += ft_strrchr.c
+SRC += ft_strsplit.c
+SRC += ft_strstr.c
+SRC += ft_strsub.c
+SRC += ft_strtrim.c
+SRC += ft_tolower.c
+SRC += ft_toupper.c
+SRC += ft_realloc.c
+SRC += ft_putnbrendl.c
+SRC += get_next_line.c
+SRC += ft_itoa_base.c
+SRC += ft_lst_mergesort.c
+SRC += ft_lst_bubblesort.c
+SRC += sort_int_tab.c
+SRC += ft_lstrev.c
+
+
+INC = libft.h
+IPATH = inc/
+OPATH = obj/
+
+OBJS = $(patsubst %.c, $(OPATH)%.o, $(SRC))
+
+all: $(OPATH) $(NAME)
+
+$(NAME): $(OBJS)
+	ar -rusc $@ $^
+	ranlib $@
+	printf "$(GREEN)$@ is ready.\n$(NC)"
+
+$(OBJS): $(OPATH)%.o : %.c $(INC)
+	$(COMPILE) $(CFLAGS) $(IFLAGS) $< -o $@
+	printf "$(YELLOW)Compiling $<\n$(NC)"
+
+$(OPATH):
+	$(MKDIR) $@
 
 clean:
-	@/bin/rm -f *.o
-	@echo "\033[1;34mLibft\t\t\033[1;33mCleaning obj\t\033[0;32m[OK]\033[0m"
-
+	$(CLEANUP) $(OBJS)
+	$(CLEANUP) $(OPATH)
+	printf "$(RED)All objects removed\n$(NC)"
 
 fclean: clean
-	@/bin/rm -f $(NAME)
-	@echo "\033[1;34mLibft\t\t\033[1;33mCleaning lib\t\033[0;32m[OK]\033[0m"
-
+	$(CLEANUP) $(NAME)
+	printf "$(RED)$(NAME) deleted\n$(NC)"
 
 re: fclean all
+
+.SILENT:

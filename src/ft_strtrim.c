@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 12:20:37 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/16 14:51:59 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2019/02/18 19:44:26 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ char	*ft_strtrim(char const *s)
 		return (0);
 	i = 0;
 	j = ft_strlen(s);
-	while (s[i] == 32 || (s[i] >= 9 && s[i] <= 13))
+	while (ft_iswhitespace(s[i]))
 		i++;
-	while (i != j && (s[j - 1] == 32 || (s[j - 1] >= 9 && s[j - 1] <= 13)))
+	while (i != j && (ft_iswhitespace(s[j - 1])))
 		j--;
 	if (!(str = (char *)malloc(sizeof(char) * (j - i + 1))))
 		return (0);
