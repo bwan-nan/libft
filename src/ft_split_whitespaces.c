@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/11 13:35:31 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/01/11 13:35:33 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2019/02/24 14:02:02 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int		count_words(char *str)
 	return (num_words);
 }
 
-char			**ft_split(char *str)
+char			**ft_split_whitespaces(char *str)
 {
 	char	**tab;
 	int		i;
