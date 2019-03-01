@@ -24,7 +24,7 @@ As you can see from the [Project instructions][1], there are 4 sections:
 3.  **Bonus Functions:** Functions 42 deems will be useful for linked list manipulation
 4.  **Personal Functions:** Functions I believe will be useful later.
 
-Libc functions | Additional functions | Bonus Functions | Personal Functions
+Libc functions | Additional functions | Lists Functions | Personal Functions
 :----------- | :-----------: | :-----------: | -----------:
 memset		   | ft_memalloc	 | ft_lstnew		 | ft_islower 
 bzero		     | ft_memdel		 | ft_lstdelone	 | ft_upper 
@@ -32,7 +32,7 @@ memcpy		   | ft_strnew		 | ft_lstdel		 | ft_iswhitespace
 memccpy		   | ft_strdel		 | ft_lstadd		 | ft_putnbrendl    
 memmove		   | ft_strclr		 | ft_lstiter	   | ft_itoa_base    
 memchr		   | ft_striter	   | ft_lstmap		 | ft_split_whitespaces
-memcmp	   	 | ft_striteri	 |				       | ft_show_tab
+memcmp	   	 | ft_striteri	 |	ft_lstappend	    | ft_show_tab
 strlen		   | ft_strmap		 |				       | get_next_line
 strdup		   | ft_strmapi	   |				       | sort_int_tab 
 strcpy		   | ft_strequ		 |			       	 | ft_lst_bubblesort
