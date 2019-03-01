@@ -6,11 +6,12 @@
 /*   By: pimichau <pimichau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/20 19:10:38 by pimichau          #+#    #+#             */
-/*   Updated: 2019/02/28 13:59:04 by pimichau         ###   ########.fr       */
+/*   Updated: 2019/03/01 23:31:49 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <unistd.h>
 
 static int		print_format(t_conv *conv, const char *format, int i)
 {
@@ -27,7 +28,7 @@ static int		print_format(t_conv *conv, const char *format, int i)
 		}
 		init_conv(conv);
 	}
-	else if (format[i] == '{')
+	else if (format[i] == '{' && isatty(1))
 	{
 		if (color_check(conv, &format[i], &i) == -1)
 		{

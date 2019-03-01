@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/30 11:34:18 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/01/30 11:37:10 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2019/03/01 23:32:50 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void		sort_int_tab(int *tab, unsigned int size)
 {
 	unsigned int	i;
 	unsigned int	j;
-	int		tmp;
+	int				tmp;
 
 	i = 0;
 	while (i < size - 1)

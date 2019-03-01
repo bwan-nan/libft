@@ -6,7 +6,7 @@
 /*   By: pimichau <pimichau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/28 11:52:16 by pimichau          #+#    #+#             */
-/*   Updated: 2019/03/01 23:05:51 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2019/03/01 23:35:05 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,7 +130,6 @@ typedef struct		s_conv
 	char			type[13];
 	t_float			*floats;
 }					t_conv;
-
 
 int					ft_printf(const char *format, ...);
 

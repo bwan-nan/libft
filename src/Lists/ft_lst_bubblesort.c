@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/30 11:22:36 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/01/30 11:38:47 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2019/03/01 23:34:01 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static t_list	*lst_swap(t_list *a, t_list *b)
 	return (b);
 }
 
-t_list		*ft_lst_bubblesort(t_list *lst, int (*cmp)(void *, void *))
+t_list			*ft_lst_bubblesort(t_list *lst, int (*cmp)(void *, void *))
 {
 	if (!lst)
 		return (NULL);

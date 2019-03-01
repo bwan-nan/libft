@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/30 13:44:18 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/01/30 13:50:10 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2019/03/01 23:33:25 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static t_list	*reversal(t_list *previous, t_list *current, t_list *next)
 	return (reversal(previous, next, NULL));
 }
 
-void		ft_lstrev(t_list **alst)
+void			ft_lstrev(t_list **alst)
 {
 	*alst = reversal(NULL, *alst, NULL);
 }
