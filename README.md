@@ -38,22 +38,22 @@ strdup		   | ft_strmapi	   |				       | sort_int_tab
 strcpy		   | ft_strequ		 |			       	 | ft_lst_bubblesort
 strncpy		   | ft_strnequ	   |			         | ft_lst_mergesort
 strcat		   | ft_strsub		 |               | ft_lstrev 
-strlcat		   | ft_strjoin	   |               | 
-strchr		   | ft_strtrim	   |               | 
-strrchr	     | ft_strsplit   |               | 
-strstr		   | ft_itoa		   |               | 
-strnstr		   | ft_putchar	   |               | 
-strcmp		   | ft_putstr		 |               | 
-strncmp		   | ft_putendl	   |               | 
-atoi		     | ft_putnbr		 |               | 
-isalpha		   | ft_putchar_fd |               | 
-isdigit		   | ft_putstr_fd	 |               | 
-isalnum		   | ft_putendl_fd |               | 
-isascii	     | ft_putnbr_fd	 |               |
-isprint		   |               |               | 
-toupper		   |               |               | 
-tolower		   |               |               | 
-
+strlcat		   | ft_strjoin	   |               | ft_count_occurence 
+strchr		   | ft_strtrim	   |               | ft_strchr_index
+strrchr	     | ft_strsplit   |               | ft_str_notchr_index
+strstr		   | ft_itoa		   |               | ft_strr_notchr_index
+strnstr		   | ft_putchar	   |               | ft_binatoi
+strcmp		   | ft_putstr		 |               | ft_llitoa
+strncmp		   | ft_putendl	   |               | ft_llitoa_base
+atoi		     | ft_putnbr		 |               | ft_ullitoa
+isalpha		   | ft_putchar_fd |               | ft_ullitoa_base
+isdigit		   | ft_putstr_fd	 |               | get_bits
+isalnum		   | ft_putendl_fd |               | ft_max
+isascii	     | ft_putnbr_fd	 |               | ft_recursive_power
+isprint		   | ft_realloc      |               | ft_printf
+toupper		   | ft_strtolower |               | 
+tolower		   | ft_strtoupper |               |
+			   |			   |				| 
 
 Notes:
 
