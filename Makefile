@@ -6,7 +6,7 @@
 #    By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 17:52:27 by bwan-nan          #+#    #+#              #
-#    Updated: 2019/03/01 23:43:34 by bwan-nan         ###   ########.fr        #
+#    Updated: 2019/03/02 01:07:40 by bwan-nan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -134,6 +134,7 @@ SRC += ft_lstclr.c
 SRC += ft_lstdel.c
 SRC += ft_lstdelone.c
 SRC += ft_lstiter.c
+SRC += ft_lst_is_sorted.c
 
 # --------------------------------------- Output --------------------------------------#
 SRC += ft_putchar.c
