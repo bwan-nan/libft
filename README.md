@@ -17,15 +17,16 @@ Disclaimer: *Reinventing the wheel is not something we do for fun. 42 makes us d
 
 ### What's in it?
 
-I separated my lib into 7 different categories::
+I separated my lib into 6 different categories::
 
 1.  **Strings Functions:** All functions manipulating characters and strings
 2.  **Conversion functions:** Functions useful to convert numbers to strings or strings to numbers
 3.  **Lists Functions:** All functions manipulating lists
 4.  **Memory Functions:** Functions related to memory allocation/use/comparison
 5.  **Output Functions:** Functions to display/output on the terminal
+6.  **Other Functions:**  Binary functions, maths functions, get_next_line, ...
 
-Strings Functions   | Conversion Functions |  Lists Functions  | Memory Functions | Output Functions | Binary Functions  |
+Strings Functions   | Conversion Functions |  Lists Functions  | Memory Functions | Output Functions |  Other Functions  |
 :-----------------: | :------------------: | :---------------: | :--------------: | :--------------: | :---------------: |
 count_occurence	    | ft_atoi	 	   | ft_islist_sorted  | ft_bzero	  | ft_printf	     | get_bits          |
 ft_isalnum	    | ft_binatoi	   | ft_lstclr	       | ft_memcpy        | ft_putchar	     | print_bits        |
