@@ -24,21 +24,19 @@ I separated my lib into 7 different categories::
 3.  **Lists Functions:** All functions manipulating lists
 4.  **Memory Functions:** Functions related to memory allocation/use/comparison
 5.  **Output Functions:** Functions to display/output on the terminal
-6.  **Binary Functions:** Some functions manipulating numbers in binary
-7.  **Other Functions:** A few functions that don't fit in any category yet
 
-Strings Functions   | Conversion Functions |  Lists Functions  | Memory Functions | Output Functions | Binary Functions  | Other Func  |
-:-----------------: | :------------------: | :---------------: | :--------------: | :--------------: | :---------------: | :----------------:|
-count_occurence	    | ft_atoi	 	   | ft_islist_sorted  | ft_bzero	  | ft_printf	     | get_bits          | ft_max            |
-ft_isalnum	    | ft_binatoi	   | ft_lstclr	       | ft_memcpy        | ft_putchar	     | print_bits        | ft_power          |
-ft_isalpha	    | ft_itoa		   | ft_lstdelone      | ft_memccpy       | ft_putendl	     | swap_bits         | ft_recursive_power|
+Strings Functions   | Conversion Functions |  Lists Functions  | Memory Functions | Output Functions | Binary Functions  |
+:-----------------: | :------------------: | :---------------: | :--------------: | :--------------: | :---------------: |
+count_occurence	    | ft_atoi	 	   | ft_islist_sorted  | ft_bzero	  | ft_printf	     | get_bits          |
+ft_isalnum	    | ft_binatoi	   | ft_lstclr	       | ft_memcpy        | ft_putchar	     | print_bits        |
+ft_isalpha	    | ft_itoa		   | ft_lstdelone      | ft_memccpy       | ft_putendl	     | swap_bits         |
 ft_isdigit	    | ft_itoa_base	   | ft_lstnew	       | ft_memcmp        | ft_putnbr	     | ft_show_tab       |
 ft_isinteger	    | ft_llitoa		   | ft_lstrevrotate   | ft_memdel        | ft_putstr_fd     | ft_sqrt		 |
 ft_islower	    | ft_ullitoa 	   | ft_lst_bubblesort | ft_memset        | ft_putnbrendl    | get_next_line	 |
 ft_isupper	    | ft_llitoa_base	   | ft_lstcount       | ft_memalloc      | ft_putchar_fd    | sort_int_tab	 |
-ft_isnumeric	    | ft_ullitoa_base      | ft_lstiter	       | ft_memchr        | ft_putendl_fd    |
-ft_isprint	    | ft_atoull		   | ft_lstprepend     | ft_memmove       | ft_putnbr_f	     |
-ft_isupper	    |			   | ft_lstrotate      | ft_realloc       | ft_putstr	     |
+ft_isnumeric	    | ft_ullitoa_base      | ft_lstiter	       | ft_memchr        | ft_putendl_fd    | ft_max            |
+ft_isprint	    | ft_atoull		   | ft_lstprepend     | ft_memmove       | ft_putnbr_f	     | ft_power          |
+ft_isupper	    |			   | ft_lstrotate      | ft_realloc       | ft_putstr	     | ft_recursive_power|
 ft_iswhitespace	    |			   | ft_lst_mergesort  |		  |		     |
 ft_split_whitespace |			   | ft_lstcpy	       |		  |		     |
 ft_str_notchr	    |			   | ft_lstmap	       |		  |		     |
