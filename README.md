@@ -17,21 +17,21 @@ Disclaimer: *Reinventing the wheel is not something we do for fun. 42 makes us d
 
 ### What's in it?
 
-I separated my lib into 6 different categories::
+I separated my lib into 7 different categories::
 
-4.  **Strings Functions:** All functions manipulating characters and strings
+1.  **Strings Functions:** All functions manipulating characters and strings
 2.  **Conversion functions:** Functions useful to convert numbers to strings or strings to numbers
 3.  **Lists Functions:** All functions manipulating lists
 4.  **Memory Functions:** Functions related to memory allocation/use/comparison
-4.  **Output Functions:** Functions to display/output on the terminal
-1.  **Binary Functions:** Some functions manipulating numbers in binary
-1.  **Other Functions:** A few functions that don't fit in any category yet
+5.  **Output Functions:** Functions to display/output on the terminal
+6.  **Binary Functions:** Some functions manipulating numbers in binary
+7.  **Other Functions:** A few functions that don't fit in any category yet
 
-Strings Functions   | Conversion Functions |  Lists Functions  | Memory Functions | Output Functions | Other Functions   |
-:-----------------: | :------------------: | :---------------: | :--------------: | :--------------: | :---------------: |
-count_occurence	    | ft_atoi	 	   | ft_islist_sorted  | ft_bzero	  | ft_printf	     | ft_max            |
-ft_isalnum	    | ft_binatoi	   | ft_lstclr	       | ft_memcpy        | ft_putchar	     | ft_power          |
-ft_isalpha	    | ft_itoa		   | ft_lstdelone      | ft_memccpy       | ft_putendl	     | ft_recursive_power|
+Strings Functions   | Conversion Functions |  Lists Functions  | Memory Functions | Output Functions | Binary Functions  | Other Func  |
+:-----------------: | :------------------: | :---------------: | :--------------: | :--------------: | :---------------: | :----------------:|
+count_occurence	    | ft_atoi	 	   | ft_islist_sorted  | ft_bzero	  | ft_printf	     | get_bits          | ft_max            |
+ft_isalnum	    | ft_binatoi	   | ft_lstclr	       | ft_memcpy        | ft_putchar	     | print_bits        | ft_power          |
+ft_isalpha	    | ft_itoa		   | ft_lstdelone      | ft_memccpy       | ft_putendl	     | swap_bits         | ft_recursive_power|
 ft_isdigit	    | ft_itoa_base	   | ft_lstnew	       | ft_memcmp        | ft_putnbr	     | ft_show_tab       |
 ft_isinteger	    | ft_llitoa		   | ft_lstrevrotate   | ft_memdel        | ft_putstr_fd     | ft_sqrt		 |
 ft_islower	    | ft_ullitoa 	   | ft_lst_bubblesort | ft_memset        | ft_putnbrendl    | get_next_line	 |
