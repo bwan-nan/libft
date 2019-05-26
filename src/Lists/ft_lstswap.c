@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstswap.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 17:55:12 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/05/22 17:50:22 by bwan-nan         ###   ########.fr       */
+/*   Created: 2019/03/02 02:48:50 by bwan-nan          #+#    #+#             */
+/*   Updated: 2019/04/24 13:53:26 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+t_list		*ft_lstswap(t_list *a, t_list *b)
 {
-	int i;
-
-	i = 0;
-	while (src[i])
+	if (a && b)
 	{
-		dest[i] = src[i];
-		i++;
+		a->next = b->next;
+		b->next = a;
+		return (b);
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (NULL);
 }

@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_lstpush.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/19 12:09:53 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/19 12:34:58 by bwan-nan         ###   ########.fr       */
+/*   Created: 2019/04/29 17:58:35 by bwan-nan          #+#    #+#             */
+/*   Updated: 2019/05/09 15:10:56 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+void	ft_lstpush(t_list **src, t_list **dest)
 {
-	if (alst && new)
+	t_list	*node;
+
+	if (*src)
 	{
-		new->next = *alst;
-		*alst = new;
+		node = *dest;
+		*dest = *src;
+		*src = (*src)->next;
+		(*dest)->next = node;
 	}
 }

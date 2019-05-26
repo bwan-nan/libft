@@ -6,7 +6,7 @@
 #    By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 17:52:27 by bwan-nan          #+#    #+#              #
-#    Updated: 2019/03/02 01:07:40 by bwan-nan         ###   ########.fr        #
+#    Updated: 2019/05/26 19:48:28 by bwan-nan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,6 +77,8 @@ SRC += ft_isalnum.c
 SRC += ft_isalpha.c
 SRC += ft_isascii.c
 SRC += ft_isdigit.c
+SRC += ft_isnumeric.c
+SRC += ft_isinteger.c
 SRC += ft_islower.c
 SRC += ft_isprint.c
 SRC += ft_isupper.c
@@ -115,9 +117,13 @@ SRC += ft_str_notchr.c
 SRC += ft_strchr_index.c
 SRC += ft_str_notchr_index.c
 SRC += ft_strr_notchr_index.c
+SRC += count_occurence.c
+SRC += variadic_strjoin.c
+SRC += ft_strstr_delim.c
 
 # ------------------------------------- Conversions -----------------------------------#
 SRC += ft_atoi.c
+SRC += ft_atoull.c
 SRC += ft_binatoi.c
 SRC += ft_itoa.c
 SRC += ft_itoa_base.c
@@ -128,13 +134,21 @@ SRC += ft_ullitoa_base.c
 SRC += get_bits.c
 
 # --------------------------------------- Lists ---------------------------------------#
-SRC += ft_lstadd.c
+SRC += ft_lstnew.c
+SRC += ft_lstprepend.c
 SRC += ft_lstappend.c
 SRC += ft_lstclr.c
 SRC += ft_lstdel.c
 SRC += ft_lstdelone.c
 SRC += ft_lstiter.c
-SRC += ft_lst_is_sorted.c
+SRC += ft_islist_sorted.c
+SRC += ft_lstswap.c
+SRC += ft_lstpush.c
+SRC += ft_lstrotate.c
+SRC += ft_lstrevrotate.c
+SRC += ft_lstcount.c
+SRC += ft_lstcpy.c
+SRC += ft_lstncpy.c
 
 # --------------------------------------- Output --------------------------------------#
 SRC += ft_putchar.c
@@ -190,7 +204,7 @@ clean:
 	$(CLEANUP) $(OBJS)
 	$(CLEANUP) $(OPATH)
 	$(CLEANUP) $(EXEC)
-	printf "$(RED)All objects removed\n$(NC)"
+	printf "$(RED)All objects removed from Libft\n$(NC)"
 
 fclean: clean
 	$(CLEANUP) $(NAME)

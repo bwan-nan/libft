@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 17:55:12 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/05/22 17:50:22 by bwan-nan         ###   ########.fr       */
+/*   Created: 2019/05/08 19:10:52 by bwan-nan          #+#    #+#             */
+/*   Updated: 2019/05/17 20:05:26 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+t_list			*ft_lstncpy(t_list *source,
+				int size, int (*cpy)(void *, void *))
 {
-	int i;
+	t_list		*copy;
+	t_list		*node;
 
-	i = 0;
-	while (src[i])
+	copy = NULL;
+	while (source && size--)
 	{
-		dest[i] = src[i];
-		i++;
+		if (!(node = ft_lstnew(source->content, sizeof(source->content))))
+			return (NULL);
+		if (cpy)
+			if (cpy(node->content, source->content))
+				return (NULL);
+		ft_lstprepend(&copy, node);
+		source = source->next;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (copy);
 }

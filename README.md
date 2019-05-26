@@ -13,55 +13,75 @@ My implementation of some of the Standard C Library functions including some add
 ### What is libft?
 Libft [(see PDF)][1] is an individual project at 42 that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the curriculum.
 
-Disclaimer: *Reinventing the wheel is not something we do for fun. 42 makes us do this just so we can have a deeper understanding of data structures and basic algorithms. At 42 we're not allowed to use some standard libraries on our projects, so we have to keep growing this library with our own functions as we go further in the curriculum.*
+Disclaimer: *Reinventing the wheel is not something we do for fun. 42 makes us do this just so we can have a deeper understanding of data structures and basic algorithms. At 42 we're not allowed to use standard libraries on our projects, so we have to keep growing this library with our own functions as we go further in the curriculum.*
 
 ### What's in it?
 
-As you can see from the [Project instructions][1], there are 4 sections:
+I separated my lib into 6 different categories::
 
-1.  **Libc Functions:** Some of the standard C functions
-2.  **Additional functions:** Functions 42 deems will be useful for later projects
-3.  **Bonus Functions:** Functions 42 deems will be useful for linked list manipulation
-4.  **Personal Functions:** Functions I believe will be useful later.
+4.  **Strings Functions:** All functions manipulating characters and strings
+2.  **Conversion functions:** Functions useful to convert numbers to strings or strings to numbers
+3.  **Lists Functions:** All functions manipulating lists
+4.  **Memory Functions:** Functions related to memory allocation/use/comparison
+4.  **Output Functions:** Functions to display/output on the terminal
+1.  **Binary Functions:** Some functions manipulating numbers in binary
+1.  **Other Functions:** A few functions that don't fit in any category yet
 
-Libc functions | Additional functions | Lists Functions | Personal Functions
-:----------- | :-----------: | :-----------: | -----------:
-memset		   | ft_memalloc	 | ft_lstnew		 | ft_islower 
-bzero		     | ft_memdel		 | ft_lstdelone	 | ft_upper 
-memcpy		   | ft_strnew		 | ft_lstdel		 | ft_iswhitespace    
-memccpy		   | ft_strdel		 | ft_lstadd		 | ft_putnbrendl    
-memmove		   | ft_strclr		 | ft_lstiter	   | ft_itoa_base    
-memchr		   | ft_striter	   | ft_lstmap		 | ft_split_whitespaces
-memcmp	   	 | ft_striteri	 |	ft_lstappend	    | ft_show_tab
-strlen		   | ft_strmap		 |				       | get_next_line
-strdup		   | ft_strmapi	   |				       | sort_int_tab 
-strcpy		   | ft_strequ		 |			       	 | ft_lst_bubblesort
-strncpy		   | ft_strnequ	   |			         | ft_lst_mergesort
-strcat		   | ft_strsub		 |               | ft_lstrev 
-strlcat		   | ft_strjoin	   |               | ft_count_occurence 
-strchr		   | ft_strtrim	   |               | ft_strchr_index
-strrchr	     | ft_strsplit   |               | ft_str_notchr_index
-strstr		   | ft_itoa		   |               | ft_strr_notchr_index
-strnstr		   | ft_putchar	   |               | ft_binatoi
-strcmp		   | ft_putstr		 |               | ft_llitoa
-strncmp		   | ft_putendl	   |               | ft_llitoa_base
-atoi		     | ft_putnbr		 |               | ft_ullitoa
-isalpha		   | ft_putchar_fd |               | ft_ullitoa_base
-isdigit		   | ft_putstr_fd	 |               | get_bits
-isalnum		   | ft_putendl_fd |               | ft_max
-isascii	     | ft_putnbr_fd	 |               | ft_recursive_power
-isprint		   | ft_realloc      |               | ft_printf
-toupper		   | ft_strtolower |               | 
-tolower		   | ft_strtoupper |               |
-			   |			   |				| 
+Strings Functions   | Conversion Functions |  Lists Functions  | Memory Functions | Output Functions | Other Functions   |
+:-----------------: | :------------------: | :---------------: | :--------------: | :--------------: | :---------------: |
+count_occurence	    | ft_atoi	 	   | ft_islist_sorted  | ft_bzero	  | ft_printf	     | ft_max            |
+ft_isalnum	    | ft_binatoi	   | ft_lstclr	       | ft_memcpy        | ft_putchar	     | ft_power          |
+ft_isalpha	    | ft_itoa		   | ft_lstdelone      | ft_memccpy       | ft_putendl	     | ft_recursive_power|
+ft_isdigit	    | ft_itoa_base	   | ft_lstnew	       | ft_memcmp        | ft_putnbr	     | ft_show_tab       |
+ft_isinteger	    | ft_llitoa		   | ft_lstrevrotate   | ft_memdel        | ft_putstr_fd     | ft_sqrt		 |
+ft_islower	    | ft_ullitoa 	   | ft_lst_bubblesort | ft_memset        | ft_putnbrendl    | get_next_line	 |
+ft_isupper	    | ft_llitoa_base	   | ft_lstcount       | ft_memalloc      | ft_putchar_fd    | sort_int_tab	 |
+ft_isnumeric	    | ft_ullitoa_base      | ft_lstiter	       | ft_memchr        | ft_putendl_fd    |
+ft_isprint	    | ft_atoull		   | ft_lstprepend     | ft_memmove       | ft_putnbr_f	     |
+ft_isupper	    |			   | ft_lstrotate      | ft_realloc       | ft_putstr	     |
+ft_iswhitespace	    |			   | ft_lst_mergesort  |		  |		     |
+ft_split_whitespace |			   | ft_lstcpy	       |		  |		     |
+ft_str_notchr	    |			   | ft_lstmap	       |		  |		     |
+ft_str_notchr_index |			   | ft_lstpush	       |		  |		     |
+ft_strcat   	    |		  	   | ft_lstswap	       |	          |		     |
+ft_strchr	    |	                   | ft_lstappend      |	          |		     |
+ft_strclr	    |		  	   | ft_lstdel	       |	          |		     |
+ft_strcmp	    |			   | ft_lstncpy	       |	          |		     |
+ft_strcpy	    |			   | ft_lstrev	       |	          |		     |
+ft_strdel	    |		 	   |		       |	          |		     |
+ft_strdup	    |			   |		       |	          |		     |
+ft_strequ	    |			   |		       |	          |		     |
+ft_striter	    |			   |		       |	          |		     |
+ft_striteri	    |			   |		       |	          |		     |
+ft_strjoin	    |			   |		       |	          |		     |
+ft_strlcat	    |			   |		       |	          |		     |
+ft_strlen	    |			   |		       |	          |		     |
+ft_strmap	    |			   |		       |	          |		     |
+ft_strmapi	    |			   |		       |	          |	 	     |
+ft_strncat	    |			   |		       |	          |		     |
+ft_strncmp	    |			   |		       |                  |		     |
+ft_strncpy	    |			   |		       |	          |		     |
+ft_strnequ	    |			   |		       |  	          |		     |
+ft_strnew	    |			   |		       |  	          |		     |
+ft_strnstr	    |			   |		       |	          |		     |
+ft_strr_notchr_index|			   |		       |	          |		     |
+ft_strrchr	    |			   |		       |	          |		     |
+ft_strsplit	    |			   |		       |	          |		     |
+ft_strstr  	    |			   |		       |	          |		     |
+ft_strstr_delim     |			   |		       |	          |		     |
+ft_strsub	    |			   |		       |	          |		     |
+ft_strtolower       |			   |		       |	          |		     |
+ft_strtoupper	    |			   |		       |	          |		     |
+ft_strtrim	    |			   |		       |	          |		     |
+ft_tolower	    |			   |		       |	          |		     |
+ft_toupper	    |			   |		       |	          |		     |
+variadic_strjoin    |			   |		       |	          |		     |
 
 Notes:
 
 - Most of the the files and function names are namespaced with an **ft** in front. It stands for Fourty Two
 - The project instructions require that we put all the source files in the root directory but for more conveniency, I separate them into sub folders.
 - I update this list every now and then with new personal functions. If you don't know what a function does, refer to the man or just test it (or ask me).
-
-My code is not the best, but it passed all the 42 tests successfully.
 
 ### How does it work?
 

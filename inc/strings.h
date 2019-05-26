@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/01 22:11:22 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/03/01 22:42:18 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2019/05/22 19:48:50 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_isdigit(int c);
+int					ft_isnumeric(char *str);
+int					ft_isinteger(char *str);
 int					ft_islower(int c);
 int					ft_isprint(int c);
 int					ft_isupper(int c);
@@ -55,8 +57,10 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strnstr(const char *haystack,
 					const char *needle, size_t len);
-int					ft_count_occurence(char *str, char c);
+int					count_occurence(char *str, char c);
 void				ft_strtoupper(char *str);
 void				ft_strlower(char *str);
+int					variadic_strjoin(char **ret, const char *format, ...);
+int					ft_strstr_delim(const char *haystack, const char *needle, char delim);
 
 #endif

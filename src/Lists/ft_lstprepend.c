@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstprepend.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 17:55:12 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/05/22 17:50:22 by bwan-nan         ###   ########.fr       */
+/*   Created: 2019/05/17 18:45:02 by bwan-nan          #+#    #+#             */
+/*   Updated: 2019/05/17 18:45:04 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+void	ft_lstprepend(t_list **alst, t_list *new)
 {
-	int i;
-
-	i = 0;
-	while (src[i])
+	if (alst && new)
 	{
-		dest[i] = src[i];
-		i++;
+		new->next = *alst;
+		*alst = new;
 	}
-	dest[i] = '\0';
-	return (dest);
 }

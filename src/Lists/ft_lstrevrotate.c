@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstrevrotate.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 17:55:12 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/05/22 17:50:22 by bwan-nan         ###   ########.fr       */
+/*   Created: 2019/03/02 03:43:39 by bwan-nan          #+#    #+#             */
+/*   Updated: 2019/05/06 15:42:18 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+void		ft_lstrevrotate(t_list **alst)
 {
-	int i;
+	t_list	*first;
+	t_list	*current;
+	t_list	*before_last;
 
-	i = 0;
-	while (src[i])
+	first = *alst;
+	current = first;
+	while (current->next)
 	{
-		dest[i] = src[i];
-		i++;
+		before_last = current;
+		current = current->next;
 	}
-	dest[i] = '\0';
-	return (dest);
+	current->next = first;
+	*alst = current;
+	before_last->next = NULL;
 }

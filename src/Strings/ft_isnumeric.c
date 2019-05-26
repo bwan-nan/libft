@@ -1,22 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_is_sorted.c                                 :+:      :+:    :+:   */
+/*   ft_isnumeric.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/02 01:01:35 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/03/02 01:09:52 by bwan-nan         ###   ########.fr       */
+/*   Created: 2019/04/24 16:14:31 by bwan-nan          #+#    #+#             */
+/*   Updated: 2019/05/17 19:59:14 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_lst_is_sorted(t_list *list, int (*cmp)(void *, void *))
+int		ft_isnumeric(char *str)
 {
-	if (!list)
-		return (1);
-	if (cmp(list->content, list->next->content) > 0)
-		return (ft_lst_is_sorted(list->next, cmp));
-	return (0);
+	int		i;
+
+	i = 0;
+	if (*str == '-' || *str == '+')
+	{
+		if (*(str + 1) == '\0')
+			return (0);
+		i++;
+	}
+	while (str[i])
+	{
+		if (!ft_isdigit(str[i]))
+			return (0);
+		i++;
+	}
+	return (1);
 }

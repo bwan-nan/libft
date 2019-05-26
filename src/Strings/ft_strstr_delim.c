@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strstr_delim.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 17:55:12 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/05/22 17:50:22 by bwan-nan         ###   ########.fr       */
+/*   Created: 2019/05/22 19:36:45 by bwan-nan          #+#    #+#             */
+/*   Updated: 2019/05/22 19:54:59 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+int		ft_strstr_delim(const char *haystack, const char *needle, char delim)
 {
-	int i;
+	char	*found;
+	int		len;
 
-	i = 0;
-	while (src[i])
+	if (haystack && needle)
 	{
-		dest[i] = src[i];
-		i++;
+		if (!(found = ft_strstr(haystack, needle)))
+			return (0);
+		len = ft_strlen(needle);
+		if (found == haystack)
+		{
+			if (!haystack[len] || haystack[len] == delim)
+				return (1);
+		}
+		else
+		{
+			if (*(found - 1) == delim && (!found[len] || found[len] == delim))
+				return (1);
+		}
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (0);
 }
