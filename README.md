@@ -123,8 +123,12 @@ Finally, running **./example | cat -e** should display:
 
 This is a list of my projects that use Libft extensively:
 
-* [get_next_line](https://github.com/bwan-nan/get_next_line)
+* [lem_in](https://github.com/bwan-nan/lem_in)
+* [push_swap](https://github.com/bwan-nan/push_swap)
+* [ft_ls](https://github.com/bwan-nan/ft_ls)
+* [ft_printf](https://github.com/bwan-nan/libft/tree/master/src/ft_printf)
 * [Fillit](https://github.com/bwan-nan/Fillit)
+* [get_next_line](https://github.com/bwan-nan/get_next_line)
 
 
 
