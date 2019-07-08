@@ -6,16 +6,18 @@
 #    By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 17:52:27 by bwan-nan          #+#    #+#              #
-#    Updated: 2019/05/26 19:48:28 by bwan-nan         ###   ########.fr        #
+#    Updated: 2019/07/03 14:25:42 by pimichau         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+DBNAME = libftdb.a
 
 CC = Clang
 CFLAGS = -Wall -Werror -Wextra
 IFLAGS = -I $(IPATH)
 COMPILE = $(CC) -c
+DEBUG = $(CC) -g -c
 MKDIR = mkdir -p
 CLEANUP = /bin/rm -rf
 
@@ -106,6 +108,7 @@ SRC += ft_strnew.c
 SRC += ft_strnstr.c
 SRC += ft_strrchr.c
 SRC += ft_strsplit.c
+SRC += ft_split_whitespaces.c
 SRC += ft_strstr.c
 SRC += ft_strsub.c
 SRC += ft_strtrim.c
@@ -120,6 +123,7 @@ SRC += ft_strr_notchr_index.c
 SRC += count_occurence.c
 SRC += variadic_strjoin.c
 SRC += ft_strstr_delim.c
+SRC += str_isascii.c
 
 # ------------------------------------- Conversions -----------------------------------#
 SRC += ft_atoi.c
@@ -149,6 +153,7 @@ SRC += ft_lstrevrotate.c
 SRC += ft_lstcount.c
 SRC += ft_lstcpy.c
 SRC += ft_lstncpy.c
+SRC += ft_lstpop.c
 
 # --------------------------------------- Output --------------------------------------#
 SRC += ft_putchar.c
@@ -179,19 +184,27 @@ IPATH = inc/
 OPATH = obj/
 
 OBJS = $(patsubst %.c, $(OPATH)%.o, $(SRC))
+OBJD = $(patsubst %.c, $(OPATH)db%.o, $(SRC))
+
+DSYM += $(NAME).dSYM
+DSYM += $(DBNAME).dSYM
 
 all: $(OPATH) $(NAME)
 
-$(EXEC): $(NAME) $(SRCM)
-	$(CC) $^ -I $(IPATH) -o $@
+debug : $(OPATH) $(DBNAME)
 
-run: $(OPATH) $(EXEC)
-	./$(EXEC)
+$(DBNAME): $(OBJD)
+	ar -rusc $@ $^
+	printf "$(GREEN)$@ is ready.\n$(NC)"
 
 $(NAME): $(OBJS)
 	ar -rusc $@ $^
 	ranlib $@
 	printf "$(GREEN)$@ is ready.\n$(NC)"
+
+$(OBJD): $(OPATH)db%.o : %.c $(INC)
+	$(DEBUG) $(CFLAGS) $(IFLAGS) $< -o $@
+	printf "$(BLUE)Compiling $< for debug\n$(NC)"
 
 $(OBJS): $(OPATH)%.o : %.c $(INC)
 	$(COMPILE) $(CFLAGS) $(IFLAGS) $< -o $@
@@ -200,13 +213,18 @@ $(OBJS): $(OPATH)%.o : %.c $(INC)
 $(OPATH):
 	$(MKDIR) $@
 
+cleandb:
+	$(CLEANUP) $(DBNAME)
+	printf "$(RED)$(DBNAME) deleted\n$(NC)"
+
 clean:
 	$(CLEANUP) $(OBJS)
 	$(CLEANUP) $(OPATH)
 	$(CLEANUP) $(EXEC)
+	$(CLEANUP) $(DSYM)
 	printf "$(RED)All objects removed from Libft\n$(NC)"
 
-fclean: clean
+fclean: clean cleandb
 	$(CLEANUP) $(NAME)
 	printf "$(RED)$(NAME) deleted\n$(NC)"
 

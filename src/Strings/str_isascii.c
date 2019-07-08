@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   str_isascii.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pimichau <pimichau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 17:55:02 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/11/07 17:55:03 by bwan-nan         ###   ########.fr       */
+/*   Created: 2019/07/03 14:24:00 by pimichau          #+#    #+#             */
+/*   Updated: 2019/07/03 14:26:16 by pimichau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int nb)
+int		str_isascii(char **line, int len)
 {
-	long int n;
+	int		i;
 
-	n = nb;
-	if (n < 0)
+	i = 0;
+	while (i < len)
 	{
-		ft_putchar('-');
-		n = -n;
+		if (!ft_isascii((*line)[i]))
+		{
+			ft_strdel(line);
+			return (0);
+		}
+		i++;
 	}
-	if (n > 9)
-	{
-		ft_putnbr(n / 10);
-		ft_putchar((n % 10) + 48);
-	}
-	if (n <= 9)
-		ft_putchar(n + 48);
+	return (1);
 }

@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstncpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstpop.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/08 19:10:52 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/06/04 11:28:56 by bwan-nan         ###   ########.fr       */
+/*   Created: 2019/06/04 17:55:09 by bwan-nan          #+#    #+#             */
+/*   Updated: 2019/06/04 18:34:04 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list			*ft_lstncpy(t_list *source,
-				int size, int (*cpy)(void *, void *))
+void	ft_lstpop(t_list **lst, t_list *target, void (*f)(void *, size_t))
 {
-	t_list		*copy;
-	t_list		*node;
+	t_list	*previous;
+	t_list	*elem;
 
-	copy = NULL;
-	while (source && size--)
+	elem = *lst;
+	previous = NULL;
+	while (elem)
 	{
-		if (!(node = ft_lstnew(source->content, sizeof(source->content))))
-			return (NULL);
-		if (cpy)
-			if (cpy(node->content, source->content))
-				return (NULL);
-		ft_lstappend(&copy, node);
-		source = source->next;
+		if (elem == target)
+		{
+			if (previous)
+				previous->next = elem->next;
+			else
+				*lst = elem->next;
+			ft_lstdelone(&elem, f);
+			break ;
+		}
+		previous = elem;
+		elem = elem->next;
 	}
-	return (copy);
 }
