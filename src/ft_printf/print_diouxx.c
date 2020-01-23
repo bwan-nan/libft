@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 13:44:09 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/03/01 15:48:51 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2020/01/23 11:02:31 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void		print_di(t_conv *conv, char *output)
 	int		digits;
 	int		is_width;
 
-	is_width = WIDTH > 0 ? 1 : 0;
+	is_width = WIDTH > 0;
 	prec = *output != '-' ?
 		PREC + FLAG.plus : PREC + 1;
 	len = *output != '-' ? ft_strlen(output)
@@ -58,7 +58,7 @@ void		print_di(t_conv *conv, char *output)
 		RET += write(1, "+", 1);
 	digits = *output == '-' ? ft_strlen(output) - 1 : ft_strlen(output);
 	RET += *output == '-' ? write(1, "-", 1) : 0;
-	WIDTH -= TYPE == 'f' ? 1 : 0;
+	WIDTH -= TYPE == 'f';
 	if (WIDTH > max)
 		if (!FLAG.less && FLAG.zero && PREC == -1)
 			while (--WIDTH >= PREC && WIDTH >= len)
@@ -104,7 +104,7 @@ void		print_x(t_conv *conv, char *output)
 	int		is_width;
 	int		r_len;
 
-	is_width = WIDTH > 0 ? 1 : 0;
+	is_width = WIDTH > 0;
 	prec = PREC == -1 ? PREC + FLAG.sharp * 2 : PREC;
 	len = PREC == -1 ? ft_strlen(output) + FLAG.sharp * 2 : ft_strlen(output);
 	r_len = PREC > (int)ft_strlen(output) ?
@@ -131,7 +131,7 @@ void		print_o(t_conv *conv, char *output)
 	int		prec;
 	int		is_width;
 
-	is_width = WIDTH > 0 ? 1 : 0;
+	is_width = WIDTH > 0;
 	prec = PREC + FLAG.sharp;
 	len = ft_strlen(output) + FLAG.sharp;
 	len = ft_strequ(output, "0") && PREC == 0 ? 0 : len;

@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/13 17:19:37 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/06/27 21:55:21 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2020/01/23 10:58:23 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int				ft_isinteger(char *str)
 		return (0);
 	else if (len == (*str == '-' ? 11 : 10))
 	{
-		tmp = ft_strsub(str, *str == '-' ? 1 : 0, 9);
+		tmp = ft_strsub(str, *str == '-', 9);
 		if ((value = ft_atoi(tmp)) > 214748364)
 			return (0);
 		else if (value == 214748364)

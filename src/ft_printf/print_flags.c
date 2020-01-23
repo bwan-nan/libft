@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 14:32:37 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/03/01 15:49:08 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2020/01/23 11:02:37 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	print_extra_o(t_conv *conv, int len, int *prec, int is_width)
 	{
 		RET += write(1, "0", 1);
 		--(*prec);
-		*prec -= *prec == 1 ? 1 : 0;
+		*prec -= *prec == 1;
 	}
 	if (WIDTH > ft_max(*prec, len) && !FLAG.less && FLAG.zero && PREC <= 0)
 		while (--WIDTH >= *prec && WIDTH >= len)

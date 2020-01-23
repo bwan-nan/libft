@@ -6,7 +6,7 @@
 /*   By: pimichau <pimichau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/22 17:40:48 by pimichau          #+#    #+#             */
-/*   Updated: 2019/03/01 15:31:44 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2020/01/23 11:02:50 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int		format_float(t_conv *conv, char *number)
 		return (-1);
 	if (ret)
 		round_float(RESULT, ret);
-	i = *(ft_str_notchr(RESULT, '0')) == '.' ? 1 : 0;
+	i = *(ft_str_notchr(RESULT, '0')) == '.';
 	if (ft_strlen(RESULT) > 1)
 	{
 		tmp = RESULT;

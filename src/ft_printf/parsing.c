@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 20:37:41 by bwan-nan          #+#    #+#             */
-/*   Updated: 2019/02/27 12:58:42 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2020/01/23 11:01:40 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ static int		check_size(char *fmt, t_conv *conv)
 	int i;
 
 	i = 0;
-	SIZE.hh = *fmt == 'h' && fmt[1] == 'h' ? 1 : 0;
-	SIZE.h = *fmt == 'h' && fmt[1] != 'h' ? 1 : 0;
-	SIZE.ll = *fmt == 'l' && fmt[1] == 'l' ? 1 : 0;
-	SIZE.l = *fmt == 'l' && fmt[1] != 'l' ? 1 : 0;
-	SIZE.lf = *fmt == 'L' ? 1 : 0;
-	SIZE.j = *fmt == 'j' ? 1 : 0;
+	SIZE.hh = *fmt == 'h' && fmt[1] == 'h';
+	SIZE.h = *fmt == 'h' && fmt[1] != 'h';
+	SIZE.ll = *fmt == 'l' && fmt[1] == 'l';
+	SIZE.l = *fmt == 'l' && fmt[1] != 'l';
+	SIZE.lf = *fmt == 'L';
+	SIZE.j = *fmt == 'j';
 	if (SIZE.h || SIZE.hh || SIZE.l || SIZE.ll || SIZE.j || SIZE.lf)
 		i += SIZE.hh == 1 || SIZE.ll == 1 ? 2 : 1;
 	if (fmt[i] == 'o' && FLAG.sharp && PREC == -1)
