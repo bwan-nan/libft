@@ -78,7 +78,6 @@ variadic_strjoin    |			   |		       |	          |		     |
 
 Notes:
 
-- Most of the the files and function names are namespaced with an **ft** in front. It stands for Fourty Two
 - The project instructions require that we put all the source files in the root directory but for more conveniency, I separate them into sub folders.
 - I update this list every now and then with new personal functions. If you don't know what a function does, refer to the man or just test it (or ask me).
 
